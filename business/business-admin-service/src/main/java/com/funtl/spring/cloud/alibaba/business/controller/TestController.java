@@ -1,5 +1,6 @@
 package com.funtl.spring.cloud.alibaba.business.controller;
 
+import com.funtl.spring.cloud.alibaba.business.ProviderAdminFeign;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,7 +20,7 @@ public class TestController {
     @GetMapping(value = "/echo/{str}")
     public String echo(@PathVariable String str) {
         // 使用服务名请求服务提供者
-        return restTemplate.getForObject("http://provider-admin-service/echo/" + str, String.class);
+        return restTemplate.getForObject("http://provider-admin/echo/" + str, String.class);
     }
 
 }

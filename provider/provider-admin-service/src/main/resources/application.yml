@@ -2,7 +2,7 @@ spring:
   main:
     allow-bean-definition-overriding: true
   application:
-    name: provider-admin-service
+    name: provider-admin
   cloud:
     nacos:
       discovery:
