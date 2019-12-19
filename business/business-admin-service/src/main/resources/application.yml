@@ -2,33 +2,42 @@ spring:
   main:
     allow-bean-definition-overriding: true
   application:
-    name: provider-admin
+    name: business-admin
   cloud:
     nacos:
+      # 服务注册中心
       discovery:
         server-addr: 192.168.2.121:8848
+      # 服务配置中心
       config:
         server-addr: 192.168.2.121:8848
     sentinel:
       transport:
+        # 熔断器控制台
         dashboard: localhost:8888
 
 dubbo:
   scan:
-    base-packages: com.funtl.spring.cloud.alibaba.provider.service
+    base-packages: com.funtl.spring.cloud.alibaba.business.controller
   protocol:
     name: dubbo
     port: -1
-  provider:
-    loadbalance: roundrobin
   registry:
     address: nacos://192.168.2.121:8848
 
+# 开启 Feign 对 Sentinel 的支持
+feign:
+  sentinel:
+    enabled: true
+
 server:
-  port: 11000
+  port: 12000
 
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+
+user:
+  name: "灶门祢豆子"

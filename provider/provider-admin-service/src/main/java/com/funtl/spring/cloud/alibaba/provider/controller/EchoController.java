@@ -1,5 +1,7 @@
 package com.funtl.spring.cloud.alibaba.provider.controller;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
+import com.funtl.spring.cloud.alibaba.provider.fallback.EchoFallback;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +19,7 @@ public class EchoController {
     }
 
     @GetMapping(value = "/echo/{string}")
+    @SentinelResource(value = "echo", fallback = "echoFallback", fallbackClass = EchoFallback.class)
     public String echo(@PathVariable String string) {
         return "Hello Nacos Provider " + string;
     }

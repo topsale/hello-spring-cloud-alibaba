@@ -9,7 +9,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>provider</artifactId>
+    <artifactId>configuration</artifactId>
     <packaging>pom</packaging>
     <url>http://www.funtl.com</url>
     <inceptionYear>2018-Now</inceptionYear>
@@ -30,7 +30,6 @@
     </developers>
 
     <modules>
-        <module>provider-admin-api</module>
-        <module>provider-admin-service</module>
+        <module>configuration-sentinel</module>
     </modules>
 </project>
