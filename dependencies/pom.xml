@@ -17,6 +17,7 @@
         <sharding-sphere.version>4.0.0-RC3</sharding-sphere.version>
         <mapper.version>2.1.5</mapper.version>
         <pagehelper.version>1.2.13</pagehelper.version>
+        <okhttp3.version>4.2.2</okhttp3.version>
     </properties>
 
     <licenses>
@@ -91,6 +92,11 @@
                 <groupId>com.github.pagehelper</groupId>
                 <artifactId>pagehelper-spring-boot-starter</artifactId>
                 <version>${pagehelper.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>okhttp</artifactId>
+                <version>${okhttp3.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

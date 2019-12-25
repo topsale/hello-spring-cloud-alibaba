@@ -1,7 +1,5 @@
 package com.funtl.spring.cloud.alibaba.commons.id;
 
-import org.springframework.stereotype.Component;
-
 import java.text.ParseException;
 
 /**
