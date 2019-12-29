@@ -18,6 +18,7 @@
         <mapper.version>2.1.5</mapper.version>
         <pagehelper.version>1.2.13</pagehelper.version>
         <okhttp3.version>4.2.2</okhttp3.version>
+        <seata.version>1.0.0</seata.version>
     </properties>
 
     <licenses>
@@ -37,6 +38,7 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- Spring Cloud -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -52,6 +54,7 @@
                 <scope>import</scope>
             </dependency>
 
+            <!-- Apache Dubbo -->
             <dependency>
                 <groupId>org.apache.dubbo</groupId>
                 <artifactId>dubbo</artifactId>
@@ -73,6 +76,7 @@
                 <version>${spring-context-support.version}</version>
             </dependency>
 
+            <!-- Apache ShardingSphere -->
             <dependency>
                 <groupId>org.apache.shardingsphere</groupId>
                 <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
@@ -83,6 +87,25 @@
                 <artifactId>sharding-jdbc-spring-namespace</artifactId>
                 <version>${sharding-sphere.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.apache.shardingsphere</groupId>
+                <artifactId>sharding-transaction-base-seata-at</artifactId>
+                <version>${sharding-sphere.version}</version>
+            </dependency>
+
+            <!-- Alibaba Seata -->
+            <dependency>
+                <groupId>io.seata</groupId>
+                <artifactId>seata-rm-datasource</artifactId>
+                <version>${seata.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.seata</groupId>
+                <artifactId>seata-tm</artifactId>
+                <version>${seata.version}</version>
+            </dependency>
+
+            <!-- Others -->
             <dependency>
                 <groupId>tk.mybatis</groupId>
                 <artifactId>mapper-spring-boot-starter</artifactId>

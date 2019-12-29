@@ -1,7 +1,6 @@
 package com.funtl.spring.cloud.alibaba.provider.service;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
-import com.funtl.spring.cloud.alibaba.provider.api.EchoService;
 import com.funtl.spring.cloud.alibaba.provider.fallback.EchoFallback;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Value;

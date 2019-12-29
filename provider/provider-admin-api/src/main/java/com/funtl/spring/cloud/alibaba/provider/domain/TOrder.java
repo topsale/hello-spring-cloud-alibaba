@@ -1,8 +1,12 @@
 package com.funtl.spring.cloud.alibaba.provider.domain;
 
-import java.io.Serializable;
-import javax.persistence.*;
 import lombok.Data;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.io.Serializable;
 
 @Data
 @Table(name = "t_order")

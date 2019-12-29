@@ -9,7 +9,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>provider-admin-api</artifactId>
+    <artifactId>provider-order-api</artifactId>
     <packaging>jar</packaging>
     <url>http://www.funtl.com</url>
     <inceptionYear>2018-Now</inceptionYear>
@@ -44,6 +44,13 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
+        </dependency>
+
+        <!-- Projects -->
+        <dependency>
+            <groupId>com.funtl</groupId>
+            <artifactId>provider-order-item-api</artifactId>
+            <version>${project.parent.version}</version>
         </dependency>
     </dependencies>
 </project>

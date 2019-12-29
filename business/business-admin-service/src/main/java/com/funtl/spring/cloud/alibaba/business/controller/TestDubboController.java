@@ -1,6 +1,6 @@
 package com.funtl.spring.cloud.alibaba.business.controller;
 
-import com.funtl.spring.cloud.alibaba.provider.api.EchoService;
+import com.funtl.spring.cloud.alibaba.provider.service.EchoService;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

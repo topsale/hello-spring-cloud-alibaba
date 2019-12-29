@@ -15,6 +15,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <url>http://www.funtl.com</url>
+    <name>parent</name>
 
     <modules>
         <module>dependencies</module>
