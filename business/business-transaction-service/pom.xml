@@ -5,11 +5,11 @@
 
     <parent>
         <groupId>com.funtl</groupId>
-        <artifactId>provider</artifactId>
+        <artifactId>business</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>provider-admin-service</artifactId>
+    <artifactId>business-transaction-service</artifactId>
     <packaging>jar</packaging>
     <url>http://www.funtl.com</url>
     <inceptionYear>2018-Now</inceptionYear>
@@ -52,10 +52,6 @@
         </dependency>
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
 
@@ -84,12 +80,7 @@
         <!-- Projects -->
         <dependency>
             <groupId>com.funtl</groupId>
-            <artifactId>provider-admin-api</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.funtl</groupId>
-            <artifactId>configuration-sentinel</artifactId>
+            <artifactId>provider-transaction-api</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
     </dependencies>
@@ -100,7 +91,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.funtl.spring.cloud.alibaba.provider.ProviderAdminApplication</mainClass>
+                    <mainClass>com.funtl.spring.cloud.alibaba.business.BusinessTransactionApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

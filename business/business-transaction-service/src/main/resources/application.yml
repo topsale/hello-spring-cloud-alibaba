@@ -2,12 +2,10 @@ spring:
   main:
     allow-bean-definition-overriding: true
   application:
-    name: provider-admin
+    name: business-transaction
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.2.121:8848
-      config:
         server-addr: 192.168.2.121:8848
     sentinel:
       transport:
@@ -15,17 +13,15 @@ spring:
 
 dubbo:
   scan:
-    base-packages: com.funtl.spring.cloud.alibaba.provider.service
+    base-packages: com.funtl.spring.cloud.alibaba.business.controller
   protocol:
     name: dubbo
     port: -1
-  provider:
-    loadbalance: roundrobin
   registry:
     address: nacos://192.168.2.121:8848
 
 server:
-  port: 11000
+  port: 12001
 
 management:
   endpoints:

@@ -6,11 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @EnableDiscoveryClient
-@SpringBootApplication(scanBasePackageClasses = {ProviderAdminApplication.class, DubboSentinelConfiguration.class})
-public class ProviderAdminApplication {
-
+@SpringBootApplication(scanBasePackageClasses = {ProviderTransactionApplication.class, DubboSentinelConfiguration.class})
+public class ProviderTransactionApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ProviderAdminApplication.class, args);
+        SpringApplication.run(ProviderTransactionApplication.class, args);
     }
-
 }

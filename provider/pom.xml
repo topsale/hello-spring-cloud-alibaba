@@ -33,8 +33,10 @@
         <module>provider-admin-api</module>
         <module>provider-order-api</module>
         <module>provider-order-item-api</module>
+        <module>provider-transaction-api</module>
         <module>provider-admin-service</module>
         <module>provider-order-service</module>
         <module>provider-order-item-service</module>
+        <module>provider-transaction-service</module>
     </modules>
 </project>

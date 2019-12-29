@@ -2,16 +2,17 @@ spring:
   main:
     allow-bean-definition-overriding: true
   application:
-    name: provider-admin
+    name: provider-transaction
   cloud:
     nacos:
       discovery:
         server-addr: 192.168.2.121:8848
-      config:
-        server-addr: 192.168.2.121:8848
     sentinel:
       transport:
         dashboard: localhost:8888
+    alibaba:
+      seata:
+        tx-service-group: tx-group
 
 dubbo:
   scan:
@@ -24,11 +25,7 @@ dubbo:
   registry:
     address: nacos://192.168.2.121:8848
 
-server:
-  port: 11000
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+#logging:
+#  level:
+#    com.funtl.spring.cloud.alibaba.provider.mapper: debug
+#    io.seata.core: debug

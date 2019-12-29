@@ -32,5 +32,6 @@
     <modules>
         <module>business-admin-feign</module>
         <module>business-admin-service</module>
+        <module>business-transaction-service</module>
     </modules>
 </project>
