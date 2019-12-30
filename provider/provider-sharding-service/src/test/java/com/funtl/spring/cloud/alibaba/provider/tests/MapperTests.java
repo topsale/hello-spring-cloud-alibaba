@@ -1,5 +1,6 @@
 package com.funtl.spring.cloud.alibaba.provider.tests;
 
+import com.funtl.spring.cloud.alibaba.commons.id.LeafSnowflakeId;
 import com.funtl.spring.cloud.alibaba.provider.domain.TbOrder;
 import com.funtl.spring.cloud.alibaba.provider.mapper.TbOrderMapper;
 import org.junit.Test;
@@ -38,6 +39,15 @@ public class MapperTests {
         // orderId 为偶数进偶数表即 tb_order_0
         order.setOrderId(2L);
         // 此时数据应插入 myshop_0.tb_order_0 中
+        orderMapper.insert(order);
+    }
+
+    @Test
+    public void testSnowflakeId() {
+        TbOrder order = new TbOrder();
+        order.setId(LeafSnowflakeId.genId());
+        order.setOrderId(3L);
+        order.setUserId(3L);
         orderMapper.insert(order);
     }
 
