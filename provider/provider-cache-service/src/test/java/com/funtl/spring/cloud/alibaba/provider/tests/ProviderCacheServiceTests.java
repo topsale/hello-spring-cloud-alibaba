@@ -22,7 +22,7 @@ public class ProviderCacheServiceTests {
 
     @Test
     public void testGet() {
-        providerCacheService.get("name");
+        System.out.println(providerCacheService.get("name"));
     }
 
     @Test
