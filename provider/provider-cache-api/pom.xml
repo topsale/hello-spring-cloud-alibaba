@@ -5,12 +5,12 @@
 
     <parent>
         <groupId>com.funtl</groupId>
-        <artifactId>hello-spring-cloud-alibaba</artifactId>
+        <artifactId>provider</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>provider</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>provider-cache-api</artifactId>
+    <packaging>jar</packaging>
     <url>http://www.funtl.com</url>
     <inceptionYear>2018-Now</inceptionYear>
 
@@ -29,18 +29,21 @@
         </developer>
     </developers>
 
-    <modules>
-        <module>provider-admin-api</module>
-        <module>provider-order-api</module>
-        <module>provider-order-item-api</module>
-        <module>provider-transaction-api</module>
-        <module>provider-sharding-api</module>
-        <module>provider-cache-api</module>
-        <module>provider-admin-service</module>
-        <module>provider-order-service</module>
-        <module>provider-order-item-service</module>
-        <module>provider-transaction-service</module>
-        <module>provider-sharding-service</module>
-        <module>provider-cache-service</module>
-    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>javax.persistence-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 </project>

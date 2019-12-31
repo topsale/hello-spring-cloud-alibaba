@@ -39,5 +39,6 @@
     <modules>
         <module>commons-mapper</module>
         <module>commons-utils</module>
+        <module>commons-cache</module>
     </modules>
 </project>

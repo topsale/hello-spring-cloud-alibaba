@@ -19,6 +19,7 @@
         <pagehelper.version>1.2.13</pagehelper.version>
         <okhttp3.version>4.2.2</okhttp3.version>
         <seata.version>1.0.0</seata.version>
+        <fastjson.version>1.2.62</fastjson.version>
     </properties>
 
     <licenses>
@@ -115,6 +116,11 @@
                 <groupId>com.squareup.okhttp3</groupId>
                 <artifactId>okhttp</artifactId>
                 <version>${okhttp3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

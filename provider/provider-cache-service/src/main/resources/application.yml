@@ -1,0 +1,32 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: provider-cache
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.2.121:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8888
+  redis:
+    cluster:
+      nodes: 192.168.2.121:6379,192.168.2.121:6380,192.168.2.121:6381
+    lettuce:
+      pool:
+        min-idle: 0
+        max-idle: 8
+        max-wait: -1ms
+        max-active: 8
+
+dubbo:
+  scan:
+    base-packages: com.funtl.spring.cloud.alibaba.provider.service
+  protocol:
+    name: dubbo
+    port: -1
+  provider:
+    loadbalance: roundrobin
+  registry:
+    address: nacos://192.168.2.121:8848
