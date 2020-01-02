@@ -5,11 +5,11 @@
 
     <parent>
         <groupId>com.funtl</groupId>
-        <artifactId>business</artifactId>
+        <artifactId>provider</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>business-transaction-service</artifactId>
+    <artifactId>provider-item-service</artifactId>
     <packaging>jar</packaging>
     <url>http://www.funtl.com</url>
     <inceptionYear>2018-Now</inceptionYear>
@@ -33,11 +33,7 @@
         <!-- Spring Boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -80,12 +76,22 @@
         <!-- Projects -->
         <dependency>
             <groupId>com.funtl</groupId>
-            <artifactId>provider-transaction-api</artifactId>
+            <artifactId>provider-item-api</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.funtl</groupId>
+            <artifactId>commons-mapper</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
         <dependency>
             <groupId>com.funtl</groupId>
             <artifactId>commons-cache</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.funtl</groupId>
+            <artifactId>configuration-sentinel</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
     </dependencies>
@@ -96,7 +102,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.funtl.spring.cloud.alibaba.business.BusinessTransactionApplication</mainClass>
+                    <mainClass>com.funtl.spring.cloud.alibaba.provider.ProviderItemApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>
